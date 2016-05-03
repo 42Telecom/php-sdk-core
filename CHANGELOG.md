@@ -1,5 +1,8 @@
 CHANGELOG
 =========
+## Version 1.0.0-RC3
+_2016-05-03_
+- **[IMPROVEMENT]** Add internal dependency.
 
 ## Version 1.0.0-RC2
 _2016-05-03_
