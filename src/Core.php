@@ -2,6 +2,7 @@
 namespace Fortytwo\SDK\Core;
 
 use Fortytwo\SDK\Core\Values\TokenValue;
+use Fortytwo\SDK\Core\Factories\ServiceFactory;
 use GuzzleHttp\Client;
 
 /**
