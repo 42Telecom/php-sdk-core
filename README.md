@@ -1,8 +1,6 @@
 FORTYTWO - SDK API CORE
 =======================================
 
-**This SDK is in Release Candidate and not ready for production yet.**
-
 CORE library for all the Fortytwo PHP SDKs:
 * Manage the authentication with fortytwo REST API server.
 * Define the URL, prefixes and ressources for each API.
