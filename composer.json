@@ -1,0 +1,27 @@
+{
+    "name": "fortytwo/php-sdk-core",
+    "description": "Fortytwo’s Core SDK. Used as base for all the Fortytwo PHP SDKs.",
+    "license": "MIT",
+    "keywords": ["fortytwo"],
+    "authors": [
+        {
+            "name": "Sebastien Lemarinel",
+            "email": "sebastien.lemarinel@fortytwo.com",
+            "homepage": "https://www.fortytwo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "jms/serializer": "^1.1",
+        "guzzlehttp/guzzle": "^6.1",
+        "alecsammon/php-raml-parser": "^2.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fortytwo\\SDK\\Core\\": "src"
+        }
+    }
+}
