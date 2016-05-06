@@ -12,14 +12,17 @@ use GuzzleHttp\Client;
  */
 abstract class Core
 {
+    /**
+     * @var object $client instance of Guzzle client.
+     */
     protected $client;
 
     /**
      * CONTSTRUCTOR - Initalize the Request object and define the headers
      *
      * @api
-     * @param $token client token for authentication
-     * @param $handler for testing purposes
+     * @param string $token client token for authentication
+     * @param object $handler for testing purposes
      */
     public function __construct($token, $handler = false)
     {
@@ -36,5 +39,42 @@ abstract class Core
         }
 
         $this->client = new Client($client);
+    }
+
+    /**
+     * Send a request to the API.
+     *
+     * @param string $api       API name.
+     * @param array  $params    Parameters to pass in the URL.
+     * @param object $entity    Instance of an entity who represent the request.
+     *
+     * @return string Json response.
+     */
+    public function request($api, $params = array(), $entity = false)
+    {
+        $api = ServiceFactory::get($api);
+
+        $url = $api->getEndPoint();
+
+        if ((count($params) > 0) && ($api->getRequiredParam())) {
+            foreach ($params as $item) {
+                $url.= '/' . $item;
+            }
+        }
+
+        $body = array();
+        if ($entity) {
+            $body = [
+                'body' => $entity->toJSON()
+            ];
+        }
+
+        $response = $this->client->request(
+            $api->getMethod(),
+            $url,
+            $body
+        );
+
+        return $response;
     }
 }

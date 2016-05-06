@@ -67,6 +67,14 @@ abstract class AbstractService
     }
 
     /**
+     * @inheritdoc
+     */
+    public function getRequiredParam()
+    {
+        return $this->requiredParam;
+    }
+
+    /**
      * @inehritDoc
      */
     public function getEndPoint()
