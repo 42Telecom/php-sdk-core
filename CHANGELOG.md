@@ -1,5 +1,10 @@
 CHANGELOG
 =========
+
+## Version 1.1.0-RC1
+_2016-05-03_
+- **[IMPROVEMENT]** Adding a new function to send requests to the API.
+
 ## Version 1.0.0
 _2016-05-03_
 - Bump to version 1.0.0
