@@ -35,4 +35,9 @@ interface ServiceInterface
      * Return the complete endpoint (Scheme + Domain + Prefix + Ressource)
      */
     public function getEndPoint();
+
+    /**
+     * Return if the Service have required parameters.
+     */
+    public function getRequiredParam();
 }
