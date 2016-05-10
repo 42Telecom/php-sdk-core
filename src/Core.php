@@ -69,11 +69,16 @@ abstract class Core
             ];
         }
 
-        $response = $this->client->request(
-            $api->getMethod(),
-            $url,
-            $body
-        );
+        try {
+            $response = $this->client->request(
+                $api->getMethod(),
+                $url,
+                $body
+            );
+
+        } catch (\Exception $e) {
+            $response = $e->getResponse()->getBody()->getContents();
+        }
 
         return $response;
     }
