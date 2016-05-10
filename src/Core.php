@@ -58,7 +58,7 @@ abstract class Core
 
         if ((count($params) > 0) && ($api->getRequiredParam())) {
             foreach ($params as $item) {
-                $url.= '/' . $item;
+                $url.= '/' . filter_var($item, FILTER_SANITIZE_URL);
             }
         }
 
