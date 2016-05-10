@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## Version 1.1.0
+_2016-05-10_
+- Bump to version 1.1.0
+
 ## Version 1.1.0-RC2
 _2016-05-10_
 - **[IMPROVEMENT]** Sanitize Values.
