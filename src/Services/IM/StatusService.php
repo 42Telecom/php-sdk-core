@@ -22,7 +22,7 @@ class StatusService extends AbstractService implements ServiceInterface
     /**
      * @var string $method HTTP method.
      */
-    protected $method = 'POST';
+    protected $method = 'GET';
     /**
      * @inehritDoc
      */
