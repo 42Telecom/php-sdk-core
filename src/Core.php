@@ -77,9 +77,9 @@ abstract class Core
             );
 
         } catch (\Exception $e) {
-            $response = $e->getResponse()->getBody()->getContents();
+            $response = $e->getResponse();
         }
 
-        return $response;
+        return $response->getBody()->getContents();
     }
 }

@@ -25,7 +25,7 @@ class ServiceFactoryTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('rest.fortytwo.com', $instance->getDomain());
         $this->assertEquals('1', $instance->getPrefix());
         $this->assertEquals('im/status', $instance->getRessource());
-        $this->assertEquals('POST', $instance->getMethod());
+        $this->assertEquals('GET', $instance->getMethod());
         $this->assertEquals('https://rest.fortytwo.com/1/im/status', $instance->getEndPoint());
     }
     public function testInstanceTfaRequest()

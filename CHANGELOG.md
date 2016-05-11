@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+## Version 1.1.1
+_2016-05-11_
+- **[BUG]** Fix the returned values on request.
+- **[BUG]** Fix IM/Status method - GET not POST.
+
 ## Version 1.1.0
 _2016-05-10_
 - Bump to version 1.1.0
